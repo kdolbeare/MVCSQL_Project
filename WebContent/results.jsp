@@ -8,39 +8,47 @@
 <!-- <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="book.css"> -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+th, td {
+	border: solid 1px
+}
+</style>
 <title>Catalog</title>
 </head>
 <body>
 	<header>
 	<div class="logo">
-			<a href="index.html">Ask the Database</a>
+		<a href="index.html">Ask the Database</a>
 	</div>
-	<ul>				
-		<li><a href="select.do">Search</a></li>	
+	<ul>
+		<li><a href="select.do">Search</a></li>
 	</ul>
-	
+
 	</header>
 	<h3>Results</h3>
-	<table>
+
 	<c:choose>
 		<c:when test="${! empty results}">
-		<tr>
-			<c:forEach var="header" items="${results[0]}">
-				<th>${header}</th>
+		<table>
+			<tr>
+				<c:forEach var="head" items="${results[0]}">
+					<th>${head}</th>
 				</c:forEach>
-		</tr>			
-			<c:forEach var="result" begin="1" items="${results}">
-		<tr>
-				<c:forEach var="cell" items="${result}">
-				<td>${cell}</td>
-			</c:forEach>
 			</tr>
-			</c:forEach>
-			</c:when>
+			
+				<c:forEach var="result" begin="1" items="${results}">
+					<tr>
+						<c:forEach var="cell" items="${result}">
+							<td>${cell}</td>
+						</c:forEach>
+					</tr>
+				</c:forEach>
+			</table>
+		</c:when>
 		<c:otherwise>
 			<p>Not found</p>
 		</c:otherwise>
 	</c:choose>
-	</table>
+
 </body>
 </html>
