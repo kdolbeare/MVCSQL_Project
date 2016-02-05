@@ -27,30 +27,14 @@ th, td {
 
 	</header>
 
-	<h3>Results</h3>
-
+	<h3>Update</h3>
 	<c:choose>
-		<c:when test="${! empty results}">
-		<table>
-			<tr>
-				<c:forEach var="head" items="${results[0]}">
-					<th>${head}</th>
-				</c:forEach>
-			</tr>
-			
-				<c:forEach var="result" begin="1" items="${results}">
-					<tr>
-						<c:forEach var="cell" items="${result}">
-							<td>${cell}</td>
-						</c:forEach>
-					</tr>
-				</c:forEach>
-			</table>
+		<c:when test="${! empty count}">
+			<p>${count}row(s)updated.</p>
 		</c:when>
 		<c:otherwise>
 			<p>Not found</p>
 		</c:otherwise>
 	</c:choose>
-
 </body>
 </html>

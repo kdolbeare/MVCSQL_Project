@@ -24,9 +24,15 @@ public class DatabaseController
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("results.jsp");
-		mv.addObject("results", databaseDAO.loadDatabaseInfo(s));
-		return mv;
-	
+		mv.addObject("results", databaseDAO.doQuery(s));
+		return mv;	
 	}
-
+	@RequestMapping(path = "update.do", params = "newInfo", method = RequestMethod.GET)
+	public ModelAndView doUpdate (@RequestParam("newInfo") String n) throws SQLException, ClassNotFoundException
+	{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("countResults.jsp");
+		mv.addObject("count", databaseDAO.doUpdate(n));
+		return mv;
+	}
 }

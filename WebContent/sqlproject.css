@@ -1,0 +1,131 @@
+header {
+  background-color: #009799;
+  width: 100%;
+  height: 100px;
+}
+.logo {
+    font-size: 3em;
+    font-family: Lucida Console;
+    font-style: italic;
+    float: left;
+    padding: 15px;
+
+}
+.search {
+  float: right;
+  display: block;
+  padding: 10px;
+  background: #e0e0d1;
+  width: auto;;
+  height:auto;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #003366;
+}
+
+body {
+  background-image: url("library1.jpg");
+  color: #003366;
+
+}
+h3 {
+  margin-left: 10px;
+  border-radius: 5px;
+  background: #e0e0d1;
+  padding: 10px;
+  width: 200px;
+  height: auto;
+}
+p {
+  background: #e0e0d1;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 125px;
+  height: 30px;
+  text-align: center;
+  font-size: 1.1em;
+}
+ul li a {
+  text-decoration: none;
+  display: block;
+  color: #003366;
+  background: #009799;
+  width: 150px;
+  height: 15px;
+  text-align: center;
+}
+
+ul li {
+  list-style-type: none;
+  float: right;
+  font-size: 1.25em;
+  margin-top: 40px;
+  margin-right: 100px;
+}
+
+input[type=text] {
+    width: 200px;
+    padding: 10px;
+    background: #e0e0d1;
+    height: auto;
+    margin-left: 10px;
+  }
+
+input[type=submit] {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    display: block;
+    padding: 10px;
+    background: #e0e0d1;
+    width: auto;;
+    height:auto;
+    text-align: center;
+  }
+.drop {
+  margin-left: 10px;
+  width: 200px;
+  height: 35px;
+  padding: 10px;
+  background: #e0e0d1;
+}
+.editbutton {
+  float:left;
+  margin-right: 10px;
+}
+
+table {
+  border: 1px solid #003366;
+  text-align: center;
+  width: 25%;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-left: 10px;
+  padding: 10px;
+  background: #e0e0d1;
+  height: auto;
+}
+td {
+  border: 1px solid #003366;
+  text-align: left;
+  padding-left: 10px;
+}
+th{
+  column-span: all;
+  border: 1px solid #003366;
+}
+.edit{
+  border-style: none;
+  width: 25%;
+  padding: 10px;
+  background: #e0e0d1;
+  width: 200px;
+  height: auto;
+  text-align: center;
+}
+.edit td {
+  border-style: none;
+}
