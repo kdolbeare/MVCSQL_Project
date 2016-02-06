@@ -1,7 +1,24 @@
 header {
-  background-color: #008000;
+  background-color: #e68900;
   width: 100%;
   height: 100px;
+}
+
+.hyperlink {
+  position: absolute;
+   top: 55%;
+   left: 55%;
+   width: 500px;
+   height: 500px;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width */
+}
+p {
+  margin-left: 200px;
+  margin-top: 100px;
+  font-size: 1.5em;
+  font-family: Lucida Console;
+  font-style: italic;
 }
 .logo {
     font-size: 3em;
@@ -15,7 +32,7 @@ header {
   float: center;
   display: block;
   padding: 10px;
-  background: #e0e0d1;
+  background: #ebf0fa;
   width: auto;
   height:auto;
   text-align: center;
@@ -23,28 +40,25 @@ header {
 
 header a {
   text-decoration: none;
-  color: #003366;
+  color: #005580;
 }
 
 body {
-  /*background-image: url("library1.jpg");*/
-  color: #003366;
+  color: #005580;
   width: 100%;
+  margin: 0;
 
 }
 h3 {
   margin-left: 10px;
   border-radius: 5px;
-  /*background: #e0e0d1;*/
   padding: 10px;
-  /*width: 200px;
-  height: auto;*/
 }
 
 ul li a {
   text-decoration: none;
   display: block;
-  color: #003366;
+  color: #005580;
   width: 150px;
   height: 15px;
   text-align: center;
@@ -61,7 +75,6 @@ ul li {
 input[type=text] {
     width: 700px;
     padding: 10px;
-    /*background: #e0e0d1;*/
     height: auto;
     margin-left: 10px;
   }
@@ -71,29 +84,40 @@ input[type=submit] {
     margin-bottom: 10px;
     display: block;
     padding: 10px;
-    /*background: #e0e0d1;*/
     width: 400px;
     height:auto;
     text-align: center;
   }
 
 table {
-  border: 1px solid #003366;
+  border: 1px solid #005580;
   text-align: center;
   width: auto;
   margin-bottom: 10px;
   margin-top: 50px;
   margin-left: 10px;
   padding: 10px;
-  /*background: #e0e0d1;*/
   height: auto;
 }
+caption {
+  border: 1px solid #005580;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-transform: capitalize;
+  font-weight: bold;
+  width:350px;
+  height:auto;
+}
 td {
-  border: 1px solid #003366;
+  border: 1px solid #005580;
   text-align: left;
-  padding-left: 10px;
+  padding: 5px;
+  width:auto;
 }
 th{
-  column-span: all;
-  border: 1px solid #003366;
+
+  border: 1px solid #005580;
+  padding-left: 5px;
+  padding-right: 5px;
 }

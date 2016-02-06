@@ -13,11 +13,11 @@
 <body>
 	<header>
 	<div class="logo">
-		<a href="index.html">Database</a>
+		<a href="index.html">MyDatabase</a>
 	</div>
 	<ul>
-		<li><a href="search.jsp">Search</a></li>
 		<li><a href="update.jsp">Edit</a></li>
+		<li><a href="search.jsp">Search</a></li>
 	</ul>
 	</header>
 	<h3>Update Results</h3>

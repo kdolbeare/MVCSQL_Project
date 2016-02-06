@@ -39,7 +39,11 @@ public class DatabaseDAO
 
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int columnCount = rsmd.getColumnCount();
-
+			String name = rsmd.getTableName(columnCount);
+			ArrayList<Object> tableName = new ArrayList<>();
+			tableName.add(name);
+			results.add(tableName);
+			
 			ArrayList<Object> columns = new ArrayList<>();
 			for (int i = 1; i <= columnCount; i++)
 			{
