@@ -1,8 +1,5 @@
 package controllers;
 
-import java.sql.*;
-import java.util.ArrayList;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +17,7 @@ public class DatabaseController
 	private DatabaseDAO databaseDAO;
 	
 	@RequestMapping(path = "select.do", params = "sqlText", method = RequestMethod.GET) 
-	public ModelAndView doQuery (@RequestParam("sqlText") String s) throws SQLException, ClassNotFoundException
+	public ModelAndView doQuery (@RequestParam("sqlText") String s) 
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("results.jsp");
@@ -28,7 +25,7 @@ public class DatabaseController
 		return mv;	
 	}
 	@RequestMapping(path = "update.do", params = "newInfo", method = RequestMethod.GET)
-	public ModelAndView doUpdate (@RequestParam("newInfo") String n) throws SQLException, ClassNotFoundException
+	public ModelAndView doUpdate (@RequestParam("newInfo") String n) 
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("countResults.jsp");

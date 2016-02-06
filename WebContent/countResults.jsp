@@ -8,29 +8,24 @@
 <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="sqlproject.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- <style>
-th, td {
-	border: solid 1px
-}
-</style> -->
-<title>Catalog</title>
+<title>Update Results</title>
 </head>
 <body>
 	<header>
 	<div class="logo">
-		<a href="index.html">Ask the Database</a>
+		<a href="index.html">Database</a>
 	</div>
 	<ul>
 		<li><a href="search.jsp">Search</a></li>
 		<li><a href="update.jsp">Edit</a></li>
 	</ul>
-
 	</header>
-
-	<h3>Update</h3>
+	<h3>Update Results</h3>
 	<c:choose>
 		<c:when test="${! empty count}">
-			<p>${count}row(s)updated.</p>
+		<table><tr>
+			<th>${count} row(s) updated.</th>
+		</tr></table>
 		</c:when>
 		<c:otherwise>
 			<p>Not found</p>

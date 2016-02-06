@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 public class DatabaseDAO
 {
 	private static String url = "jdbc:mysql://localhost:3306/companydb";
@@ -57,12 +59,21 @@ public class DatabaseDAO
 				results.add(values);
 			}
 
+		} catch (MySQLSyntaxErrorException e)
+		{
+			System.out.println("the exception is: " + e);
+			ArrayList<Object> error = new ArrayList<>();
+//			String errorMessage = "Invalid input ... please try again.";
+			error.add("Invalid input ... please try again.");
+			results.add(error);
+			return results;
+
 		} catch (Exception e)
 		{
 			System.out.println("the exception is: " + e);
 			ArrayList<Object> error = new ArrayList<>();
-			String errorMessage = "An error has occurred ... please try again.";
-			error.add(errorMessage);
+//			String errorMessage = "An error has occurred ... please try again.";
+			error.add("An error has occurred ... please try again.");
 			results.add(error);
 			return results;
 
@@ -92,12 +103,17 @@ public class DatabaseDAO
 			stmt = conn.createStatement();
 			count = stmt.executeUpdate(s);
 
+		} catch (MySQLSyntaxErrorException e)
+		{
+			System.out.println("the exception is: " + e);
+//			String errorMessage = "Invalid input ... please try again. 0 ";
+			return "Invalid input ... please try again. 0 ";
+
 		} catch (Exception e)
 		{
 			System.out.println("the exception is: " + e);
-			String errorMessage = "An error has occurred ... please try again. 0 ";
-			return errorMessage;
-
+//			String errorMessage = "An error has occurred ... please try again. 0 ";
+			return "An error has occurred ... please try again. 0 ";
 		} finally
 		{
 			try
@@ -108,9 +124,7 @@ public class DatabaseDAO
 			{
 				System.out.println("in doUpdate finally");
 			}
-
 		}
 		return count;
 	}
-
 }

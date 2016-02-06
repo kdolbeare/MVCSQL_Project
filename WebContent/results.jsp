@@ -8,27 +8,19 @@
 <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="sqlproject.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!-- <style>
-th, td {
-	border: solid 1px
-}
-</style> -->
-<title>Catalog</title>
+<title>Results</title>
 </head>
 <body>
 	<header>
 	<div class="logo">
-		<a href="index.html">Ask the Database</a>
+		<a href="index.html">Database</a>
 	</div>
 	<ul>
 		<li><a href="search.jsp">Search</a></li>
 		<li><a href="update.jsp">Edit</a></li>
 	</ul>
-
 	</header>
-
-	<h3>Results</h3>
-
+	<h3>Query Results</h3>
 	<c:choose>
 		<c:when test="${! empty results}">
 		<table>
@@ -36,8 +28,7 @@ th, td {
 				<c:forEach var="head" items="${results[0]}">
 					<th>${head}</th>
 				</c:forEach>
-			</tr>
-			
+			</tr>		
 				<c:forEach var="result" begin="1" items="${results}">
 					<tr>
 						<c:forEach var="cell" items="${result}">
@@ -51,6 +42,5 @@ th, td {
 			<p>Not found</p>
 		</c:otherwise>
 	</c:choose>
-
 </body>
 </html>

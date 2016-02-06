@@ -6,16 +6,18 @@
 <link rel="stylesheet" href="normalize.css">
 <link rel="stylesheet" href="sqlproject.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Query</title>
+<title>Update</title>
+</head>
+<body>
+<header>
 <div class="logo">
-		<a href="index.html">Ask the Database</a>
+		<a href="index.html">Database</a>
 	</div>
 	<ul>
 		<li><a href="search.jsp">Search</a></li>
 		<li><a href="update.jsp">Edit</a></li>
 	</ul>
-</head>
-<body>
+</header>
 	<form class="search" action="update.do" method="GET">
 		 <input type="text" placeholder="Enter to Insert or Update or Delete" name="newInfo"> 
 		 <button type="submit" value="submit" name="submit">Update</button>
