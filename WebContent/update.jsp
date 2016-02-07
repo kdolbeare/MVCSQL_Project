@@ -19,7 +19,7 @@
 	</ul>
 </header>
 	<form class="search" action="update.do" method="GET">
-		 <input type="text" placeholder="Enter to Insert or Update or Delete" name="newInfo"> 
+		 <input type="text" placeholder="Enter to Insert, Update or Delete" name="newInfo"> 
 		 <button type="submit" value="submit" name="submit">Update</button>
 	</form>
 </body>

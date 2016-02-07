@@ -40,6 +40,7 @@ public class DatabaseDAO
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int columnCount = rsmd.getColumnCount();
 			String name = rsmd.getTableName(columnCount);
+			
 			ArrayList<Object> tableName = new ArrayList<>();
 			tableName.add(name);
 			results.add(tableName);
@@ -67,7 +68,6 @@ public class DatabaseDAO
 		{
 			System.out.println("the exception is: " + e);
 			ArrayList<Object> error = new ArrayList<>();
-//			String errorMessage = "Invalid input ... please try again.";
 			error.add("Invalid input ... please try again.");
 			results.add(error);
 			return results;
@@ -76,7 +76,6 @@ public class DatabaseDAO
 		{
 			System.out.println("the exception is: " + e);
 			ArrayList<Object> error = new ArrayList<>();
-//			String errorMessage = "An error has occurred ... please try again.";
 			error.add("An error has occurred ... please try again.");
 			results.add(error);
 			return results;
@@ -110,13 +109,11 @@ public class DatabaseDAO
 		} catch (MySQLSyntaxErrorException e)
 		{
 			System.out.println("the exception is: " + e);
-//			String errorMessage = "Invalid input ... please try again. 0 ";
 			return "Invalid input ... please try again. 0 ";
 
 		} catch (Exception e)
 		{
 			System.out.println("the exception is: " + e);
-//			String errorMessage = "An error has occurred ... please try again. 0 ";
 			return "An error has occurred ... please try again. 0 ";
 		} finally
 		{
